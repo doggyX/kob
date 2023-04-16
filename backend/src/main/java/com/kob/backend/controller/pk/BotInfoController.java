@@ -14,19 +14,12 @@ public class BotInfoController {
 
     @RequestMapping("/getBotInfo/")
 
-    public List<Map<String, String>> getBotInfo() {
+    public Map<String, String> getBotInfo() {
         List<Map<String, String>> list = new LinkedList<>();
-        Map<String, String> map1=new HashMap<>();
-        Map<String, String> map2=new HashMap<>();
+        Map<String, String> bot=new HashMap<>();
 
-        map1.put("name", "tiger");
-        map1.put("age", "14");
-
-        map2.put("name", "lion");
-        map2.put("age", "12");
-
-        list.add(map1);
-        list.add(map2);
-        return list;
+        bot.put("name", "tiger");
+        bot.put("rating", "1500");
+        return bot;
     }
 }
